@@ -44,13 +44,11 @@ metadata:
   namespace: default
 spec:
   ports:
-  - nodePort: 31738
-    port: 8080
+  - port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: hello-world
-  sessionAffinity: None
   type: LoadBalancer
 
 ---
@@ -71,4 +69,3 @@ spec:
             name: hello-world
             port:
               number: 8080
-
